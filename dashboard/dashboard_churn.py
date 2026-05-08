@@ -84,7 +84,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     # Caminho do arquivo CSV tratado
-    file_path = r"../dados/tratados/telco_customer_churn_tratado.csv"
+    file_path = r"dados\tratados\telco_customer_churn_tratado.csv"
     
     try:
         df = pd.read_csv(file_path)
