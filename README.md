@@ -222,15 +222,6 @@ O dashboard foi desenvolvido em Streamlit para fornecer uma experiência visual 
 
 
 # 🏆 Conclusão
-
-### Uma solução estratégica de retenção baseada em dados.
-
-Combinando:
-
-* SQL
-* Engenharia de dados
-* Business Intelligence
-* Machine Learning
 * Dashboard interativo
 
 A solução oferece valor técnico e executivo, aumentando significativamente o potencial competitivo da equipe no Hackathon.
