@@ -222,7 +222,3 @@ O dashboard foi desenvolvido em Streamlit para fornecer uma experiência visual 
 
 
 # 🏆 Conclusão
-* Dashboard interativo
-
-A solução oferece valor técnico e executivo, aumentando significativamente o potencial competitivo da equipe no Hackathon.
-
