@@ -217,3 +217,8 @@ O dashboard foi desenvolvido em Streamlit para fornecer uma experiência visual 
 
 
 # 🏆 Conclusão
+Este projeto representa o esforço máximo e a dedicação da equipe em aplicar de forma integrada todas as ferramentas e metodologias ensinadas ao longo do curso. Nossa prioridade foi garantir que cada etapa — desde a extração de dados via SQL até a construção dos modelos de Machine Learning — fosse acompanhada de um cuidado analítico rigoroso e de uma preocupação constante com a integridade dos dados.
+
+Buscamos elevar o nível da entrega simulando uma situação real de consultoria estratégica. Por isso, investimos em um storytelling financeiro e executivo, capaz de traduzir métricas complexas em insights acionáveis e resultados tangíveis para o negócio, como a mensuração da receita em risco e a proposta de ações preventivas.
+
+Acreditamos que a combinação de uma base técnica sólida (Python, SQL e Scikit-learn) com uma apresentação visual interativa e clara é o que transforma dados em decisões inteligentes. Finalizamos este ciclo com a confiança de que entregamos uma solução estratégica completa voltada para o crescimento sustentável da organização.
