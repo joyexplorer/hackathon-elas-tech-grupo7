@@ -1,4 +1,4 @@
-# 📊 Hackathon Elas na Tech - Previsão de Churn em Telecom
+# 📊 Hackathon Elas Tech - Previsão de Churn em Telecom
 
 ## 👥 Equipe Grupo 7
 
