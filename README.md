@@ -2,7 +2,7 @@
 
 ## 👥 Equipe Grupo 7
 
-Projeto desenvolvido para o Hackathon Elas na Tech com foco em análise estratégica, predição de churn e visualização executiva para apoiar decisões de retenção de clientes em uma empresa de telecomunicações.
+Projeto desenvolvido para o Hackathon Elas Tech com foco em análise estratégica, predição de churn e visualização executiva para apoiar decisões de retenção de clientes em uma empresa de telecomunicações.
 
 ---
 
