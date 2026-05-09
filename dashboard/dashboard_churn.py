@@ -63,19 +63,25 @@ st.markdown("""
     }
     /* Tabs personalizadas */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 2rem;
-        background-color: #f0f2f6;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
+        gap: 1rem;
+        background-color: #1a1a2e;
+        padding: 0.8rem;
+        border-radius: 0.8rem;
     }
     .stTabs [data-baseweb="tab"] {
+        color: white !important;
+        background-color: #16213e;
         border-radius: 0.5rem;
-        padding: 0.5rem 1rem;
-        font-weight: 500;
+        padding: 0.6rem 1rem;
+        font-weight: 600;
+    }
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: #667eea;
+        color: white !important;
     }
     .stTabs [aria-selected="true"] {
-        background-color: #667eea;
-        color: white;
+        background-color: #667eea !important;
+        color: white !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -258,9 +264,9 @@ if df is not None:
     st.markdown("---")
     
     # Abas principais
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "📊 Visão Geral", "📈 Análise de Churn", "👤 Perfil do Cliente", 
-        "💰 Análise Financeira", "🎯 Recomendações"
+        "💰 Análise Financeira", "🎯 Recomendações", "🧠 Machine Learning"
     ])
     
     # TAB 1 - Visão Geral
@@ -580,6 +586,98 @@ if df is not None:
         st.markdown("---")
         st.caption("📊 Telecom Churn Analytics Dashboard | Desenvolvido com Streamlit | Fonte: IBM Telco Customer Churn (Dados Tratados)")
         st.caption(f"🔄 Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
+
+            # TAB 6 - Machine Learning
+    with tab6:
+        st.subheader("🤖 Modelagem Preditiva de Churn")
+
+        st.markdown("""
+        Esta etapa utiliza três algoritmos de classificação para prever clientes com maior risco de cancelamento:
+        
+        - **Regressão Logística:** Maior interpretabilidade e melhor Recall
+        - **Random Forest:** Robustez para padrões complexos
+        - **XGBoost:** Alta performance preditiva
+        """)
+
+        st.markdown("---")
+
+        # Métricas comparativas
+        st.subheader("📊 Comparativo entre Modelos")
+
+        metricas_ml = pd.DataFrame({
+            'Modelo': ['Regressão Logística', 'Random Forest', 'XGBoost'],
+            'Acurácia': [74.0, 78.4, 75.2],
+            'Precisão Churn': [50.6, 63.1, 52.6],
+            'Recall Churn': [76.8, 44.6, 65.3],
+            'F1-Score': [61.0, 52.3, 58.2]
+        })
+
+        st.dataframe(metricas_ml, use_container_width=True, hide_index=True)
+
+        st.info("""
+        🎯 **Modelo Estratégico Escolhido:** Regressão Logística
+        
+        Apesar de menor acurácia geral, apresentou o maior Recall,
+        capturando a maior quantidade de clientes com risco real de churn.
+        """)
+
+        st.markdown("---")
+
+        # Matriz simplificada
+        st.subheader("📌 Interpretação Estratégica")
+
+        st.markdown("""
+        ### Principais Insights:
+        
+        - Clientes com **contrato mensal** possuem maior risco
+        - **Fibra óptica** mostrou maior propensão ao cancelamento
+        - **Electronic Check** representa fator crítico
+        - **Tempo de contrato** é o maior fator de retenção
+        - Serviços adicionais como suporte e segurança reduzem churn
+        """)
+
+        st.markdown("---")
+
+        # Variáveis mais importantes
+        st.subheader("📈 Top Variáveis que Mais Impactam o Churn")
+
+        importancia = pd.DataFrame({
+            'Variável': [
+                'tempo_contrato_meses',
+                'tipo_contrato_Two year',
+                'valor_total',
+                'servico_internet_Fiber optic',
+                'tipo_contrato_One year',
+                'metodo_pagamento_Electronic check'
+            ],
+            'Impacto': [
+                '🔵 Forte Retenção',
+                '🔵 Retenção',
+                '🔴 Risco',
+                '🔴 Alto Risco',
+                '🔵 Retenção',
+                '🔴 Alto Risco'
+            ]
+        })
+
+        st.dataframe(importancia, use_container_width=True, hide_index=True)
+
+        st.markdown("---")
+
+        st.success("""
+        🚀 Próximo Passo Estratégico:
+        
+        Integrar o score preditivo de churn ao CRM da empresa para:
+        
+        - Alertas automáticos
+        - Campanhas preventivas
+        - Retenção personalizada
+        - Segmentação inteligente
+        """)
+
+        # Footer ML
+        st.markdown("---")
+        st.caption("🤖 Módulo de Machine Learning | Classificação Preditiva de Churn")
 
 else:
     st.warning("⚠️ Não foi possível carregar os dados. Verifique o arquivo 'telco_customer_churn_tratado.csv' e tente novamente.")
