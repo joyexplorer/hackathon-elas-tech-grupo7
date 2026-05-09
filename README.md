@@ -114,19 +114,14 @@ Base final pronta para:
 
 ## 5️⃣ Machine Learning 
 
-### Modelos planejados:
+#Modelos testados:
 
-* 
-* 
-* 
-
-### Métricas:
-
-* 
-*
-* 
-*
-* 
+* Regressão Logística
+* Melhor Recall para churn
+* Alta interpretabilidade
+* Modelo estratégico principal
+* Random Forest
+* XGBoost
 
 ### Objetivo:
 
